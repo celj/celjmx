@@ -1,6 +1,6 @@
 import { getBlogPosts } from 'app/blog/utils'
 
-export const baseUrl = 'https://celj.github.io'
+export const baseUrl = 'https://celjmx.vercel.app'
 
 export default async function sitemap() {
   let blogs = getBlogPosts().map((post) => ({
