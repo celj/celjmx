@@ -15,6 +15,21 @@ function ArrowIcon() {
   )
 }
 
+// function getToday(): string {
+//     const today = new Date();
+
+//     const monthNames = [
+//         "January", "February", "March", "April", "May", "June", 
+//         "July", "August", "September", "October", "November", "December"
+//     ];
+
+//     const day = today.getDate();
+//     const month = monthNames[today.getMonth()];
+//     const year = today.getFullYear();
+
+//     return `${month} ${day}, ${year}`;
+// }
+
 export default function Footer() {
   return (
     <footer className="mb-16">
@@ -35,7 +50,7 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/vercel/next.js"
+            href="https://github.com/celj"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">github</p>
@@ -46,15 +61,39 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
+            href="https://gitlab.com/celjmx"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
+            <p className="ml-2 h-7">gitlab</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/celjmx/"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">linkedin</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://x.com/celjmx/"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">x (twitter)</p>
           </a>
         </li>
       </ul>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
         © {new Date().getFullYear()} MIT Licensed
+        {/* <br />
+        Last updated: {getToday()} */}
       </p>
     </footer>
   )
