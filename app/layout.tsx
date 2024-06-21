@@ -55,6 +55,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.png" sizes="any" type="image/png" />
         <link rel="shortcut icon" href="/icon.png" type="image/png" />
+        <meta name="google-site-verification" content="uzQXdhsrE79sP4zCfzXQouABTU2cR9XVahQePobxDeA" />
       </head>
       <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
