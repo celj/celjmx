@@ -1,5 +1,8 @@
 RUN := pnpm run
 
+init:
+	@pnpm install
+
 dev:
 	@$(RUN) dev
 
