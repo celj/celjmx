@@ -1,7 +1,12 @@
 RUN := pnpm run
 
 dev:
-	$(RUN) dev
+	@$(RUN) dev
+
+build:
+	@$(RUN) build
 
 start:
-	$(RUN) start
+	@$(RUN) start
+
+serve: build start
