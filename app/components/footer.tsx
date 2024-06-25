@@ -12,14 +12,14 @@ function ArrowIcon() {
         fill="currentColor"
       />
     </svg>
-  )
+  );
 }
 
 // function getToday(): string {
 //     const today = new Date();
 
 //     const monthNames = [
-//         "January", "February", "March", "April", "May", "June", 
+//         "January", "February", "March", "April", "May", "June",
 //         "July", "August", "September", "October", "November", "December"
 //     ];
 
@@ -93,8 +93,8 @@ export default function Footer() {
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
         © {new Date().getFullYear()} MIT Licensed
         {/* <br />
-        Last updated: {getToday()} */}
+				Last updated: {getToday()} */}
       </p>
     </footer>
-  )
+  );
 }

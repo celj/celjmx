@@ -1,27 +1,27 @@
-import './global.css'
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
-import { baseUrl } from './sitemap'
+import "./global.css";
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { Navbar } from "./components/nav";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "./components/footer";
+import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Carlos Lezama',
-    template: '%s | Carlos Lezama',
+    default: "Carlos Lezama",
+    template: "%s | Carlos Lezama",
   },
-  description: 'This is Carlos Lezama.',
+  description: "This is Carlos Lezama.",
   openGraph: {
-    title: 'Carlos Lezama',
-    description: 'This is Carlos Lezama.',
+    title: "Carlos Lezama",
+    description: "This is Carlos Lezama.",
     url: baseUrl,
-    siteName: 'Carlos Lezama',
-    locale: 'en_US',
-    type: 'website',
+    siteName: "Carlos Lezama",
+    locale: "en_US",
+    type: "website",
   },
   robots: {
     index: true,
@@ -29,33 +29,36 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
-const cx = (...classes) => classes.filter(Boolean).join(' ')
+const cx = (...classes) => classes.filter(Boolean).join(" ");
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        "text-black bg-white dark:text-white dark:bg-black",
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
       )}
     >
       <head>
         <link rel="icon" href="/icon.png" sizes="any" type="image/png" />
         <link rel="shortcut icon" href="/icon.png" type="image/png" />
-        <meta name="google-site-verification" content="uzQXdhsrE79sP4zCfzXQouABTU2cR9XVahQePobxDeA" />
+        <meta
+          name="google-site-verification"
+          content="uzQXdhsrE79sP4zCfzXQouABTU2cR9XVahQePobxDeA"
+        />
       </head>
       <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
@@ -67,5 +70,5 @@ export default function RootLayout({
         </main>
       </body>
     </html>
-  )
+  );
 }
