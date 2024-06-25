@@ -1565,8 +1565,8 @@ snapshots:
     dependencies:
       server-only: 0.0.1
 
-  ? "@vercel/speed-insights@1.0.9(next@14.2.0-canary.62(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)"
-  : optionalDependencies:
+  "@vercel/speed-insights@1.0.9(next@14.2.0-canary.62(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)":
+    optionalDependencies:
       next: 14.2.0-canary.62(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
 
@@ -1649,8 +1649,8 @@ snapshots:
 
   function-bind@1.1.2: {}
 
-  ? geist@1.2.2(next@14.2.0-canary.62(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
-  : dependencies:
+  geist@1.2.2(next@14.2.0-canary.62(react-dom@18.2.0(react@18.2.0))(react@18.2.0)):
+    dependencies:
       next: 14.2.0-canary.62(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
   graceful-fs@4.2.11: {}
