@@ -40,12 +40,6 @@ fn main() -> Result<()> {
         .init();
     let start: std::time::Instant = std::time::Instant::now();
     let args: Args = Args::parse();
-    let runtime: Result<runtime::Runtime, std::io::Error> = runtime::Builder::new_multi_thread()
-        .worker_threads(args.threads)
-        .enable_all()
-        .build();
-    runtime?.block_on(run_job(&args))?;
-    info!("Job finished in {} seconds", start.elapsed().as_secs_f64());
     Ok(())
 }
 ```
