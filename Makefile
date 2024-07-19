@@ -12,11 +12,10 @@ dev:
 fmt:
 	@$(RUN) fmt
 
-init:
+init: clean
 	@$(RUN) install
 
 start:
 	@$(RUN) start
 
-reinit: clean init
 serve: build start
