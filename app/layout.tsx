@@ -45,8 +45,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={cx("text-black bg-white dark:text-white dark:bg-black", GeistSans.variable, GeistMono.variable)}
     >
       <head>
-        <link rel="icon" href="/icon.png" sizes="any" type="image/png" />
-        <link rel="shortcut icon" href="/icon.png" type="image/png" />
+        <link rel="icon" href="/icon/me.png" sizes="any" type="image/png" />
+        <link rel="shortcut icon" href="/icon/me.png" type="image/png" />
         <meta name="google-site-verification" content="uzQXdhsrE79sP4zCfzXQouABTU2cR9XVahQePobxDeA" />
       </head>
       <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto">
