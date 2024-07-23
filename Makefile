@@ -1,4 +1,4 @@
-RUN := pnpm run
+RUN := pnpm
 
 build:
 	@$(RUN) build
@@ -9,11 +9,13 @@ clean:
 dev:
 	@$(RUN) dev
 
-init:
-	@pnpm install
+fmt:
+	@$(RUN) fmt
+
+init: clean
+	@$(RUN) install
 
 start:
 	@$(RUN) start
 
-reinit: clean init
 serve: build start
