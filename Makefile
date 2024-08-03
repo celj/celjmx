@@ -1,10 +1,10 @@
-RUN := pnpm
+RUN := bun run
 
 build:
 	@$(RUN) build
 
 clean:
-	@rm -rf .next/ next-env.d.ts node_modules/ pnpm-lock.yaml
+	@rm -rf bun.lockb .next/ next-env.d.ts node_modules/
 
 dev:
 	@$(RUN) dev
@@ -13,7 +13,10 @@ fmt:
 	@$(RUN) fmt
 
 init: clean
-	@$(RUN) install
+	@bun i
+
+lint:
+	@$(RUN) lint
 
 start:
 	@$(RUN) start
