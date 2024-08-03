@@ -4,7 +4,8 @@ build:
 	@$(RUN) build
 
 clean:
-	@rm -rf bun.lockb .next/ next-env.d.ts node_modules/
+	@git clean -fdX
+	@rm -f bun.lockb
 
 dev:
 	@$(RUN) dev
