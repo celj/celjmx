@@ -1,0 +1,51 @@
+---
+title: "ML resources"
+publishedAt: "n/a"
+summary: "A streamlined, step-by-step guide for my future self to easily and reliably set up macOS for software development."
+---
+
+Introduction.
+
+## Some subtitle
+
+Some words. More words. Then code.
+
+```rust
+use anyhow::{Ok, Result};
+use clap::Parser;
+use dedup::{
+    actions::{cleanse, deduplicate, wait},
+    args::Args,
+};
+use log::{info, LevelFilter};
+use tokio::runtime;
+
+async fn run_job(args: &Args) -> Result<()> {
+    if args.ad.is_some() || args.rundate.is_some() {
+        match args.cleanse {
+            true => {
+                cleanse(args).await?;
+            }
+            false => deduplicate(args).await?,
+        };
+    } else if args.wait {
+        wait(args).await?;
+    }
+    Ok(())
+}
+
+fn main() -> Result<()> {
+    env_logger::builder()
+        .filter_level(LevelFilter::Info)
+        .init();
+    let start: std::time::Instant = std::time::Instant::now();
+    let args: Args = Args::parse();
+    Ok(())
+}
+```
+
+More text.
+
+## Conclusion
+
+Some final words.
