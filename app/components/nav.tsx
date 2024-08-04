@@ -9,6 +9,10 @@ const navItems = {
     name: "blog",
     target: "_self",
   },
+  "/blog/ml-resources": {
+    name: "ml resources",
+    target: "_self",
+  },
   "/resume/Carlos Lezama.pdf": {
     name: "about me",
     target: "_blank",
