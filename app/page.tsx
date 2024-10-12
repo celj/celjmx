@@ -1,30 +1,35 @@
-import { BlogPosts } from "app/components/posts"
+import { BlogPosts } from "app/components/posts";
 
 function yearsDelta(givenDate: Date): number {
-  const currentDate = new Date()
+  const currentDate = new Date();
 
-  let years = currentDate.getFullYear() - givenDate.getFullYear()
+  let years = currentDate.getFullYear() - givenDate.getFullYear();
 
-  const currentMonth = currentDate.getMonth()
-  const givenMonth = givenDate.getMonth()
+  const currentMonth = currentDate.getMonth();
+  const givenMonth = givenDate.getMonth();
 
-  const currentDay = currentDate.getDate()
-  const givenDay = givenDate.getDate()
+  const currentDay = currentDate.getDate();
+  const givenDay = givenDate.getDate();
 
-  if (currentMonth < givenMonth || (currentMonth === givenMonth && currentDay < givenDay)) {
-    years--
+  if (
+    currentMonth < givenMonth ||
+    (currentMonth === givenMonth && currentDay < givenDay)
+  ) {
+    years--;
   }
 
-  return years
+  return years;
 }
 
-const givenDate = new Date("2020-02-01")
-const yearsOfExperience = yearsDelta(givenDate)
+const givenDate = new Date("2020-02-01");
+const yearsOfExperience = yearsDelta(givenDate);
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Carlos Lezama</h1>
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+        Carlos Lezama
+      </h1>
       <p className="mb-4">
         {`Data Scientist and Software Engineer with ${yearsOfExperience} years of experience, excelling in a rapidly expanding startup environment.`}
       </p>
@@ -32,5 +37,5 @@ export default function Page() {
         <BlogPosts />
       </div>
     </section>
-  )
+  );
 }

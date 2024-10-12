@@ -1,10 +1,10 @@
-RUN := bun run
+RUN := deno task
 
 build:
 	@$(RUN) build
 
 clean:
-	@rm -rf bun.lockb .next/ next-env.d.ts node_modules/
+	@rm -rf deno.lock .next/ next-env.d.ts node_modules/
 
 dev:
 	@$(RUN) dev
